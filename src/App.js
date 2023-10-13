@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import { Box, ThemeProvider, createTheme } from '@mui/material';
 import './App.css';
+import HeaderContainer from './containers/HeaderContainer';
+import SliderContainer from './containers/SliderContainer';
+import DestinationsContainer from './containers/DestinationsContainer';
+import ExperienceContainer from './containers/ExperienceContainer';
+import OffersContainer from './containers/OffersContainer';
+import FooterContainer from './containers/FooterContainer';
 
 function App() {
+  const theme = createTheme({
+    typography: {
+      fontFamily: "'montserrat', sans-serif",
+      backgroundColor: "blue !important"
+    },
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ThemeProvider theme={theme}>
+        <HeaderContainer />
+        <SliderContainer />
+        <DestinationsContainer />
+        <ExperienceContainer />
+        <OffersContainer />
+        <FooterContainer />
+      </ThemeProvider>
+    </>
   );
 }
 
