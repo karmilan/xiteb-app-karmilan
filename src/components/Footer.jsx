@@ -117,7 +117,7 @@ const Footer = () => {
                 primaryTypographyProps={{
                   sx: { ...footerStyle.listItemTextHeading },
                 }}
-                primary="Sections"
+                primary="Follow Us"
               />
             </ListItem>
             <ListItem disablePadding>
