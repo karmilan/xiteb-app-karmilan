@@ -9,6 +9,7 @@ import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
+import { sliderStyle } from "../styles/SliderStyle";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -113,9 +114,9 @@ const Slider = () => {
           >
             {/* Next */}
             {theme.direction === "rtl" ? (
-              <KeyboardArrowLeft sx={{ fontSize: 100 }} />
+              <KeyboardArrowLeft sx={sliderStyle.arrowIcon} />
             ) : (
-              <KeyboardArrowRight sx={{ fontSize: 100 }} />
+              <KeyboardArrowRight sx={sliderStyle.arrowIcon} />
             )}
           </Button>
         }
@@ -126,9 +127,9 @@ const Slider = () => {
             disabled={activeStep === 0}
           >
             {theme.direction === "rtl" ? (
-              <KeyboardArrowRight sx={{ fontSize: 100 }} />
+              <KeyboardArrowRight sx={sliderStyle.arrowIcon} />
             ) : (
-              <KeyboardArrowLeft sx={{ fontSize: 100 }} />
+              <KeyboardArrowLeft sx={sliderStyle.arrowIcon} />
             )}
             {/* Back */}
           </Button>
@@ -142,7 +143,7 @@ const Slider = () => {
           justifyContent="center"
           width="100%"
         >
-          <Typography component="h1" sx={{ color: "white", fontSize: 40, fontWeight:'900' }}>
+          <Typography component="h1" sx={{ color: "white", fontSize: {xs:15, md:40}, fontWeight:'900' }}>
             {images[activeStep].label}
           </Typography>
         </Box>

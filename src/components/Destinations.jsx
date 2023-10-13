@@ -71,7 +71,10 @@ const Destinations = () => {
         flexDirection="column"
         my={{ xs: "20px", sm: "80px" }}
       >
-        <Typography sx={{ color: "#77328b" }} fontSize="70px">
+        <Typography
+          sx={{ color: "#77328b" }}
+          fontSize={{ xs: "40px", md: "70px" }}
+        >
           Our Destinations
         </Typography>
 
@@ -107,23 +110,28 @@ const Destinations = () => {
           </Select>
         </FormControl>
 
-        <Box position="relative">
-          <img src={dest} />
-          {/* <img src={map} style={{position:'absolute'}}/> */}
-          <Box
-            component="img"
-            src={map}
-            position="absolute"
-            top="5%"
-            right="88.5%"
-          />
+        <Box position={{ md: "relative" }}>
+          <Box position="relative">
+            {/* <img src={dest} /> */}
+            <Box component="img" src={dest} width="100%" />
+            {/* <img src={map} style={{position:'absolute'}}/> */}
+            <Box
+              component="img"
+              src={map}
+              position="absolute"
+              top={{ xs: "12em", md: "5%" }}
+              right={{ xs: "0", md: "88.5%" }}
+              width={{ xs: "30%", md: "unset" }}
+            />
+          </Box>
 
           <Card
             sx={{
               minWidth: 275,
-              position: "absolute",
+              position: { md: "absolute" },
               left: "84%",
               bottom: "40%",
+              m: { xs: "50px 40px", md: "unset" },
             }}
           >
             <CardContent>
@@ -142,7 +150,9 @@ const Destinations = () => {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button variant="contained" size="small" sx={{m:'10px auto'}} >Discover More</Button>
+              <Button variant="contained" size="small" sx={{ m: "10px auto" }}>
+                Discover More
+              </Button>
             </CardActions>
           </Card>
         </Box>
