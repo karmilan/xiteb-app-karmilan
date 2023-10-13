@@ -120,9 +120,12 @@ function TopBar(props) {
 
   return (
     <Box sx={{ display: { xs: "none", sm: "flex" } }}>
-      
-      <AppBar component="nav" sx={{...topBarStyle.navBarStyle, top: "unset" }} position="static">
-        <Toolbar sx={{mx:'auto'}}>
+      <AppBar
+        component="nav"
+        sx={{ ...topBarStyle.navBarStyle, top: "unset" }}
+        position="static"
+      >
+        <Toolbar sx={{ mx: "auto" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -194,9 +197,9 @@ function TopBar(props) {
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main">
+      {/* <Box component="main">
         <Toolbar />
-      </Box>
+      </Box> */}
     </Box>
   );
 }

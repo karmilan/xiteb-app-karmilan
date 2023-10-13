@@ -19,11 +19,11 @@ function App() {
     <>
       <ThemeProvider theme={theme}>
         <HeaderContainer />
-        <SliderContainer />
+        {/* <SliderContainer />
         <DestinationsContainer />
         <ExperienceContainer />
         <OffersContainer />
-        <FooterContainer />
+        <FooterContainer /> */}
       </ThemeProvider>
     </>
   );
